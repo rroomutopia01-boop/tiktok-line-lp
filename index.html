@@ -457,7 +457,7 @@
           action="https://formsubmit.co/room.utopia01@gmail.com"
           method="POST"
         >
-          <!-- ▼送信後の遷移先（JSでもこの値を利用） -->
+          <!-- ▼送信後の遷移先 -->
           <input
             type="hidden"
             name="_next"
@@ -659,47 +659,26 @@
     </div>
   </footer>
 
-  <!-- パターンA：JSで送信制御 + サンクスへ遷移 + dataLayerイベント -->
+  <!-- 計測専用：フォーム表示 & 送信クリックイベントのみ -->
   <script>
     (function() {
-      // フォーム閲覧イベント（ファネルの入口）
       window.dataLayer = window.dataLayer || [];
+
+      // フォーム閲覧イベント
       window.dataLayer.push({
         'event': 'line_condition_form_view'
       });
 
-      var form = document.getElementById('line-condition-form');
-      if (!form) return;
-
-      form.addEventListener('submit', function(e) {
-        // 通常のフォーム送信（ブラウザのPOST）を止める
-        e.preventDefault();
-
-        // 送信イベントをGTMへ
-        window.dataLayer.push({
-          'event': 'line_condition_form_submit'
-        });
-
-        var formData = new FormData(form);
-        var action = form.getAttribute('action');
-        var nextUrl = formData.get('_next') || 'https://rroomutopia01-boop.github.io/tiktok-line-lp/line_condition_thanks.html';
-
-        // formsubmit に fetch でPOST → 成否にかかわらずサンクスへ
-        if (action) {
-          fetch(action, {
-            method: 'POST',
-            body: formData,
-            mode: 'no-cors'
-          }).catch(function(error) {
-            console.error('form submit error:', error);
-          }).finally(function() {
-            window.location.href = nextUrl;
+      // 送信ボタンクリック時のイベント
+      var submitBtn = document.getElementById('line-condition-submit');
+      if (submitBtn) {
+        submitBtn.addEventListener('click', function() {
+          window.dataLayer.push({
+            'event': 'line_condition_form_submit'
           });
-        } else {
-          // actionがない場合でもサンクスには飛ばす
-          window.location.href = nextUrl;
-        }
-      });
+        });
+      }
+      // 送信自体はブラウザ標準のフォーム動作に任せる
     })();
   </script>
 </body>
