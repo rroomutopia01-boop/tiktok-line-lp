@@ -454,29 +454,37 @@
         <!-- 希望条件フォーム（GTM用ID付き） -->
         <form
           id="line-condition-form"
-          action="https://formsubmit.co/room.utopia01@gmail.com"
+          action="https://api.web3forms.com/submit"
           method="POST"
         >
-          <!-- ▼送信後の遷移先 -->
+          <!-- Web3Forms 必須：アクセスキー -->
           <input
             type="hidden"
-            name="_next"
+            name="access_key"
+            value="ccdaa457-5680-4f94-9035-4ac5846c8ab1"
+          />
+
+          <!-- 送信後の遷移先（サンクスページ） -->
+          <input
+            type="hidden"
+            name="redirect"
             value="https://rroomutopia01-boop.github.io/tiktok-line-lp/line_condition_thanks.html"
           />
 
-          <!-- ▼メールの件名 -->
+          <!-- メールの件名・差出人名 -->
           <input
             type="hidden"
-            name="_subject"
+            name="subject"
             value="ルムピア不動産 希望条件フォームから新規相談が届きました"
           />
+          <input
+            type="hidden"
+            name="from_name"
+            value="ルムピア不動産 希望条件フォーム"
+          />
 
-          <!-- ▼メール本文テンプレ（テーブル形式） -->
-          <input type="hidden" name="_template" value="table" />
-
-          <!-- ▼スパム対策：CAPTCHAオフ＋ハニーポット -->
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" style="display:none" />
+          <!-- スパム対策（ボットチェック） -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
 
           <div class="form-row form-row-inline">
             <div>
