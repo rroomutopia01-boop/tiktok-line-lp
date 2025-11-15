@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>希望条件の送信ありがとうございました｜ルムピア不動産</title>
+  <meta name="description" content="希望条件フォームの送信ありがとうございます。いただいた内容をもとに、ルムピア不動産の担当者がお客様に合ったお部屋をご提案いたします。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0];
+      var j=d.createElement(s);
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5N9B24DT');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #dbeafe;
+      --accent: #f97316;
+      --bg: #f3f4f6;
+      --text: #111827;
+      --muted: #6b7280;
+      --radius-lg: 16px;
+      --shadow-sm: 0 8px 20px rgba(15,23,42,0.08);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Noto Sans JP", sans-serif;
+      background: radial-gradient(circle at top, #e0f2fe 0, #f9fafb 40%, #e5e7eb 100%);
+      color: var(--text);
+    }
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: #fff;
+      max-width: 640px;
+      width: 100%;
+      border-radius: 24px;
+      padding: 32px 24px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.12), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(251,146,60,0.12), transparent 55%);
+      pointer-events: none;
+    }
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      background: #ecfdf3;
+      color: #15803d;
+      margin-bottom: 12px;
+    }
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.25);
+    }
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 4px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .title-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-light);
+      font-size: 18px;
+    }
+    .lead {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .highlight-box {
+      background: #f9fafb;
+      border-radius: var(--radius-lg);
+      padding: 16px 14px;
+      margin-bottom: 20px;
+      border: 1px dashed #e5e7eb;
+    }
+    .highlight-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .highlight-title span.icon {
+      font-size: 16px;
+    }
+    .highlight-list {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .highlight-list li {
+      display: flex;
+      gap: 6px;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+    .highlight-list li::before {
+      content: "・";
+      flex-shrink: 0;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .step {
+      background: #fff;
+      border-radius: 14px;
+      padding: 10px 10px 11px;
+      border: 1px solid #e5e7eb;
+    }
+    .step-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .step-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .step-text {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(37,99,235,0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 32px rgba(37,99,235,0.45);
+    }
+    .btn-outline {
+      background: #fff;
+      color: var(--text);
+      border: 1px solid #d1d5db;
+    }
+    .btn-outline:hover {
+      background: #f9fafb;
+    }
+    .btn-icon {
+      font-size: 15px;
+    }
+    .note {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .note-strong {
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 18px;
+      border-top: 1px solid rgba(209,213,219,0.8);
+      padding-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 6px;
+      font-size: 10px;
+      color: #9ca3af;
+    }
+    .brand {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    @media (min-width: 640px) {
+      .card {
+        padding: 32px 28px;
+      }
+      .title {
+        font-size: 24px;
+      }
+      .lead {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5N9B24DT"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="page-wrapper">
+    <main class="card" aria-labelledby="thanks-title">
+      <div class="card-inner">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          希望条件フォームの送信が完了しました
+        </div>
+        <h1 class="title" id="thanks-title">
+          <span class="title-icon">✅</span>
+          ご入力ありがとうございます！
+        </h1>
+        <p class="lead">
+          お送りいただいた希望条件をもとに、ルムピア不動産の担当者が
+          <strong>できるだけ本日〜翌営業日以内</strong>を目安に、お部屋の候補をお探しします。<br>
+          ご紹介はすべて<strong>公式LINE上でご案内</strong>いたします。
+        </p>
+
+        <section class="highlight-box" aria-label="このあとについて">
+          <div class="highlight-title">
+            <span class="icon">📩</span>
+            このあとについて
+          </div>
+          <ul class="highlight-list">
+            <li>条件に合うお部屋をピックアップして、順次公式LINEにてご提案します。</li>
+            <li>よりスムーズにご紹介するため、LINEトークで
+              <span class="note-strong">「内見希望の日程」や「気になっているエリア」</span>も教えていただけると助かります。
+            </li>
+          </ul>
+        </section>
+
+        <section aria-label="次のアクション">
+          <div class="steps">
+            <div class="step">
+              <div class="step-label">STEP 1</div>
+              <div class="step-title">LINEを開いて待機</div>
+              <p class="step-text">
+                公式LINEにメッセージが届きますので、通知をオンにしてお待ちください。
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-label">STEP 2</div>
+              <div class="step-title">追加のご要望をトークで送信</div>
+              <p class="step-text">
+                「家賃はもう少し下げたい」「ペット相談可がいい」など、細かい条件も遠慮なくお送りください。
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-label">STEP 3</div>
+              <div class="step-title">物件提案＆内見の日程調整</div>
+              <p class="step-text">
+                担当者から物件をご提案し、そのまま内見希望日の調整までLINE上で完結できます。
+              </p>
+            </div>
+          </div>
+
+          <div class="cta-group">
+            <!-- 公式LINEへ戻る -->
+            <a href="https://lin.ee/DBTAePO" class="btn btn-primary">
+              <span class="btn-icon">💬</span>
+              公式LINEで担当者に相談する
+            </a>
+
+            <!-- 元のLPへ戻る -->
+            <a href="https://rroomutopia01-boop.github.io/tiktok-line-lp/" class="btn btn-outline">
+              <span class="btn-icon">🏠</span>
+              LPトップに戻る
+            </a>
+          </div>
+
+          <p class="note">
+            ※しばらく経ってもLINEに返信が届かない場合は、
+            <span class="note-strong">電波状況・ブロック設定・通知設定</span>をご確認のうえ、
+            お手数ですがトーク画面から一度メッセージをお送りください。
+          </p>
+        </section>
+
+        <div class="footer">
+          <div class="brand">ルムピア不動産</div>
+          <div>TikTok / LINE Users Rental Support</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 希望条件フォーム送信完了イベント -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'line_condition_form_submit_complete'
+    });
+  </script>
+</body>
+</html>
