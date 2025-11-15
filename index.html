@@ -452,7 +452,32 @@
         <p class="card-sub">※お分かりになる範囲でご入力ください。後からの変更も可能です。</p>
 
         <!-- 希望条件フォーム（GTM用ID付き） -->
-        <form id="line-condition-form" action="/thanks-line-condition" method="post">
+        <form
+          id="line-condition-form"
+          action="https://formsubmit.co/room.utopia01@gmail.com"
+          method="POST"
+        >
+          <!-- ▼送信後の遷移先 -->
+          <input
+            type="hidden"
+            name="_next"
+            value="https://rroomutopia01-boop.github.io/tiktok-line-lp/line_condition_thanks.html"
+          />
+
+          <!-- ▼メールの件名 -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="ルムピア不動産 希望条件フォームから新規相談が届きました"
+          />
+
+          <!-- ▼メール本文テンプレ（テーブル形式） -->
+          <input type="hidden" name="_template" value="table" />
+
+          <!-- ▼スパム対策：CAPTCHAオフ＋ハニーポット -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" />
+
           <div class="form-row form-row-inline">
             <div>
               <label for="name">お名前・ニックネーム<span class="required">必須</span></label>
@@ -625,7 +650,7 @@
 
   <footer>
     <div class="footer-inner">
-      <div>© 20XX ルムピア不動産株式会社</div>
+      <div>© 2025 ルムピア不動産株式会社</div>
       <div class="footer-links">
         <a href="/company" target="_blank" rel="noopener noreferrer">会社概要</a>
         <a href="/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
